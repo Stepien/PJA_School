@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+  <title>Florist shop simulator</title>
+</head>
+<body>
+  <section id="gui">
+    <h1>O funkcjonalności gui</h1>
+    <p>Dodawanie klienta: należy wypełnić pola klienta (imie, ilość pieniędzy) i kliknąć przycisk "Dodaj klienta"</p>
+    <p>Dodawanie produktu do koszyka aktualnie wybranego klienta: należy wybrać produkt z listy i kliknąć "Dodaj produkt do koszyka"</p>
+    <p>Usuwanie produktu z koszyka aktualnie wybranego klienta: należy wybrać produkt z listy produktów znajdujących się w koszyku i kliknąć "Usuń produkt z koszyka"</p>
+    <p>Finalizowanie transakcji: by sfinalizować transakcję aktualnie wybranego klienta, kliknij "Zapłać"</p>
+    <p>Zmiana klienta: by zmienić klienta na koszyku którego operujemy, należy wybrać go (klienta) z listy</p>
+    <p>Przegląd magazynu: by dokonać inspekcji danej paczki leżącej na magazynie, kliknij "Inspekcja"</p>
+  </section>
+
+  <section id="relations">
+    <h1>O najwazniejszych elementach</h1>
+    <p>O kwiatkach: Każdy kwiatek musi dziedziczyć po klasie Flower, zaimplementować metody clone() oraz accept(visitor), a także znaleźć się w package ..flowers.certain</p>
+    <p>O kliencie: każdy klient posiada swój identyfikator (najczęściej w postaci imienia lub nazwiska lub nazwy spółki) oraz zasób gotówki w portfelu (klasa Wallet)</p>
+    <p>O sklepie: sklep zawiera koszyki (dla) klientów oraz listę asortymentu znajdującego się na magazynie. Zawiera także magazyn na odłożone paczki.</p>
+    <p>O transakcji: transakcja dopełniana jest między klientem a sklepem, jeżeli dojdzie do skutku, towar podlegający wymianie za pieniądze jest dostępny do odebrania (często (co się dzieje w gui) trafia po prostu na magazyn sklepu), a klient kończy interakcję ze sklepem i odkłada wózek.</p>
+  </section>
+
+  <section id="patterns">
+    <p>Wizytator: wizytator kwiatków analizujący package z kwiatami</p>
+    <p>Mvc: gui</p>
+    <p>Singleton: symulacja</p>
+    <p>Klasy abstrakcyjne, polimorfizm: kwiaty</p>
+    <p>Factory method: kwiatki z ..flowers.certain</p>
+    <p>Flyweight po identyfikatorach: asortyment w sklepie</p>
+  </section>
+
+  <section id="nextflowers">
+    <h1>Jak dodawać nowe kwiatki bez ingerencji w inne klasy</h1>
+    <p>Aby dodać kolejnego kwiatka (mleczyk?), należy utworzyć odpowiedni plik .java w ..flowers.certain, stworzyć klasę dziedziczacą po klasie Flowers i zaimplementować wszystkie potrzebne metody (oraz wywołać konstruktor rodzica ustawiając nazwę kwiatka oraz jego humanistyczną reprezentację koloru)</p>
+  </section>
+</body>
+</html>
