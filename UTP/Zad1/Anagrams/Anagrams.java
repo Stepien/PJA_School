@@ -1,8 +1,3 @@
-/**
- *
- *  @author Stępniewski Jarosław S12391
- *
- */
 package zad1;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
