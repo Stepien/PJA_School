@@ -1,9 +1,3 @@
-/**
- *
- *  @author Stępniewski Jarosław S12391
- *
- */
-
 package zad1;
 
 import zad1.simulation.Simulator;
