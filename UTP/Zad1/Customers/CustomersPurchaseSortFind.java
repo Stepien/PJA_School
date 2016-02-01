@@ -1,8 +1,3 @@
-/**
- *
- *  @author Stępniewski Jarosław S12391
- *
- */
 package zad2;
 import java.io.*;
 import java.util.*;
