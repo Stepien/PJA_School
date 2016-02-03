@@ -1,0 +1,12 @@
+<project name="database" default="start-db" basedir=".">
+	<target name="start-db">
+		<exec executable="java.exe">
+			<arg line="-jar ../../derby/lib/derbyrun.jar server start" />
+		</exec>
+	</target>
+	<target name="stop-db">
+		<exec executable="java.exe">
+			<arg line="-jar ../../derby/lib/derbyrun.jar server shutdown" />
+		</exec>
+	</target>
+</project>
