@@ -1,0 +1,45 @@
+C-struktury (rozdziaª 13).
+Napisz nast¦puj¡cy program:
+Deniujemy jedno wyliczenie i trzy C-struktury
+enum Banks {PKO, BGZ, BRE, BPH};
+struct Account {
+Banks bank;
+int balance;
+};
+struct Person {
+char name[20];
+Account account;
+};
+struct Couple {
+Person he;
+Person she;
+};
+i w funkcji main tworzymy tablic¦ par (Couple):
+Couple cpls[] = {
+// ...
+};
+z danymi, na przykªad, takimi
+No He She
+Name Bank Balance Name Bank Balance
+0 Johny PKO 1100 Mary BGZ 1500
+1 Peter BGZ 1400 Suzy BRE 1300
+2 Kevin PKO 1600 Katy BPH 1500
+3 Kenny BPH 1800 Lucy BRE 1700
+Zdeniowa¢ funkcj¦ o nagªówku
+Couple* bestClient(Couple* cpls, int size, Banks bank);
+która zwraca wska¹nik do tej pary (Couple) z tablicy przekazanej jako pierwszy
+argument (o wymiarze size), która ma najwi¦ksz¡ sum¦ oszcz¦dno±ci jego (he) i jej
+(she), ale tylko spo±ród takich par, w których przynajmniej jedno z maª»onków ma
+konto w banku bank. Je±li »adna z osób nie ma konta w banku bank, to funkcja zwraca
+wska¹nik pusty, czyli nullptr. Nie wolno zakªada¢, »e stan konta jest nieujemny;
+mo»e by¢ dowolnie du»y dodatni i dowolnie du»y ujemny.
+Na przykªad program o schemacie
+int main() {
+Couple cpls[] = {
+// ...
+};
+Couple* p = bestClient(cpls,4,BGZ);
+cout << // ...
+}
+powinien wypisa¢ co± w rodzaju
+Peter and Suzy: 2700

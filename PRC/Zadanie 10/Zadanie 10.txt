@@ -1,0 +1,56 @@
+Uzupelni¢ podane klasy i funkcje, tak aby zadziaªaªa podana ni»ej funkcja main (pro-
+sz¦ nie usuwa¢ instrucji delete). Destruktor klasy Person powinien co± pisa¢, aby-
+±my wiedzieli kiedy obiekty tej klasy s¡ usuwane.
+#include <iostream>
+#include <cstring>
+using namespace std;
+class Person {
+char* name;
+friend class Couple;
+public:
+friend ostream& operator<<(ostream& str, const Person& os);
+explicit Person(const char* n);
+Person(const Person& os);
+Person& operator=(const Person& os);
+~Person();
+};
+// implementacja zadeklarowanych funkcji
+class Couple {
+Person *wife, *husband;
+public:
+friend ostream& operator<<(ostream& str, const Couple& p);
+Couple(const Person& she, const Person& he);
+Couple(const Couple& other);
+Couple& operator=(const Couple& other);
+~Couple();
+};
+// implementacja zadeklarowanych funkcji
+int main(void) {
+Person *pjohn = new Person("John"),
+*pjane = new Person("Jane");
+Person mary("Mary"), mark("Mark");
+Couple *pcouple1 = new Couple(mary, *pjohn);
+Couple couple2(*pjane,mark);
+delete pjohn;
+delete pjane;
+cout << *pcouple1 << endl;
+cout << couple2 << endl;
+couple2 = *pcouple1;
+delete pcouple1;
+cout << couple2 << endl;
+}
+Po uzupeªnieniu implementacji program powinien si¦ skompilowa¢ i wypisa¢ co± w ro-
+dzaju
+DEL John
+DEL Jane
+Couple: he John, she Mary
+Couple: he Mark, she Jane
+DEL Jane
+DEL Mark
+DEL Mary
+DEL John
+Couple: he John, she Mary
+DEL Mary
+DEL John
+DEL Mark
+DEL Mary
