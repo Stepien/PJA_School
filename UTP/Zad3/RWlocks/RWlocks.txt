@@ -1,4 +1,0 @@
-﻿Pokazać zastosowanie read/write locków i porównać ich efektywność w stosunku do zwykłej synchronizacji.
-﻿
-﻿
-﻿.
