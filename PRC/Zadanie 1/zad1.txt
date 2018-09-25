@@ -1,22 +1,0 @@
-Napisz program wygladajacy tak:
-#include <iostream>
-using namespace std;
-// preprocessor macros
-void rekur() {
-// ...
-}
-int main() {
-rekur();
-}
-Dodaj makra preprocesora na poczatku i denicje rekurencyjnej funkcji rekur().
-Nie u»ywaj tablic ani zadnego innego rodzaju kolekcji. Nie uzywaj zadnej formy petli.
-Program powinien powtarzac zachete do wpisania dodatniej liczby calkowitej (typu
-int) az do momentu, gdy uzytkownik wpisze liczbe 0. Wtedy wszytkie wczytane
-liczby powinny ukazac sie w jednej linii w kolejnosci odwrotnej do tej w jakiej zostaly
-wprowadzone. Na przykad, jesli uzytkownik wprowadzil liczby 2, 5, 7, 1, 0, wynik
-powinien byc
-1 7 5 2
-w jednej linii. Jesli jest zdeniowane makro preprocesora POL, program powinien
-porozumiewac sie z uzytkownikiem po polsku, jesli ENG jest zdeniowane to po angielsku
-(jesli zadne z nich nie jest zdeniowane lub zdeniowane sa oba, program nie
-poowinien sie skompilowac).
