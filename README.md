@@ -1,2 +1,2 @@
 # PJA_School
-School Projests 
+School Projects 
